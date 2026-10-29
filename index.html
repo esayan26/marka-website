@@ -1,3 +1,27 @@
+Я разблокала
+Мне надо создать сайт вот тебе памятка 
+Логотип марка - в левом верхнем углу.
+Вход Регистрация - в правом верхнем углу,
+Рекламы и ставки две большие центральные карточки 
+Поисковик заказчика - отдельный блок справа 
+Соц-сети -в левом нижнем углу.
+Информация руководителя - в правом нижнем углу
+Мне надо создать сайт  марка вот тебе 
+Логотип марка - в левом верхнем углу.
+Вход Регистрация - в правом верхнем углу, переход для входа или регистрации по почте 
+Рекламы и ставки две большие центральные карточки суммы под товарами 
+Поисковик заказчика - отдельный блок справа  поиск реклам 
+Соц-сети -в левом нижнем углу. Переход на соц сеть 
+Вот у меня есть Информация руководителя - в правом нижнем углу  чтобы там было написаны данные руководителя  
+У меня есть логотип марка фон белого цвета а буквы черного цвета.
+Есть кнопка вход или регистрация  они черного цвета если нажать кнопку вход или регистрация переходишь на вход или регистрацию по  почте. Сделай Когда ты зарегистрирован на сайте можно в настройках имени фамилий и отчества должность руководитель администратор сотрудник поставщик покупатель продавец менеджер. Поисковик там можно будет искать товары.
+Кнопка информация о руководителе там будет фото руководителя компаний марка имя фамилия отчество телефон и описание руководителя. Кнопка соц сети там все контакты руководителя и соц сети.
+Вход и регистрация черным 
+Все Кнопки черным цветом 
+Логотип  марка  черным цветом 
+Все остальное белое 
+XML
+
 <input id="query" type="search"
   placeholder="Поиск товаров...">
 
@@ -20,3 +44,211 @@
 
 <button onclick="searchProducts()">Найти</button>
 <p id="result" class="muted"></p>
+XML
+
+<div class="socials">
+  <a href="#" onclick="showMessage('Telegram'); return false">✈</a>
+  <a href="#" onclick="showMessage('Instagram'); return false">◎</a>
+  <a href="#" onclick="showMessage('TikTok'); return false">♪</a>
+  <a href="#" onclick="showMessage('YouTube'); return false">▶</a>
+</div>
+XML
+
+<h2>Информация о руководителе</h2>
+
+<div class="leader">
+  <div class="avatar">👤</div>
+
+  <div>
+    <strong>Имя Фамилия Отчество</strong>
+    <p class="muted">Должность</p>
+    <p class="muted">
+      Описание руководителя и компании
+    </p>
+  </div>
+
+  <span>›</span>
+</div>
+а нужно писать про логотип цвет и фон
+Логотип МАРКА фон белого цвета буквы черного  цвета 
+Кнопка вход или регистрация переход на вход или регистрацию по почте 
+Кнопки соц-сети черного цвета все 
+Поисковик кроме серых букв поиск товаров всё остальные кнопки 
+ чёрного цвета . раздел реклама товаров буквы черного цвета и надпись реклама товаров тоже. Раздел реклама стартапов буквы 
+черного цвета и надпись реклама  стартапов  тоже 
+раздел информация о руководителе буквы черного цвета надпись имя фамилия отчество  черного цвета надпись должность серого цвета и надпись краткое описание руководителя и компаний 
+ 
+
+
+0:01
+
+
+0:23
+
+Приду
+Хорошо
+https://esayan26.github.io/marka-website/
+https://esayan26.github.io/marka-website/
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Марка</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;padding:28px;background:#fff;color:#000;font-family:Arial,sans-serif}
+header{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:35px}
+.logo{font:48px Georgia,serif;letter-spacing:3px;padding:10px 18px;position:relative}
+.logo:before,.logo:after{content:"";position:absolute;left:10%;width:80%;height:18px;border:2px solid #000;z-index:-1}
+.logo:before{top:0;border-bottom:0;border-radius:100% 100% 0 0}
+.logo:after{bottom:0;border-top:0;border-radius:0 0 100% 100%}
+button{background:#000;color:#fff;border:1px solid #000;padding:13px 22px;border-radius:8px;cursor:pointer;font-size:16px}
+.auth{display:flex;gap:12px}
+.main{display:grid;grid-template-columns:1fr 1fr .9fr;gap:16px}
+.card{border:1px solid #ccc;border-radius:12px;padding:18px;min-width:0;background:#fff}
+.picture{height:190px;background:#f3f3f3;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:65px;margin-bottom:18px}
+.ad h1{font:38px Georgia,serif;margin:0 0 12px}
+.ad p{color:#444}
+.search h2{margin-top:5px;font-size:28px}
+input,select{width:100%;padding:14px;margin-bottom:12px;border:1px solid #bbb;border-radius:8px;background:#fff;color:#000;font-size:15px}
+.search button{width:100%}
+.bottom{display:grid;grid-template-columns:1.2fr 1fr;gap:16px;margin-top:20px}
+.socials{display:flex;gap:12px;flex-wrap:wrap}
+.socials a{display:flex;width:52px;height:52px;justify-content:center;align-items:center;background:#000;color:#fff;border-radius:12px;text-decoration:none;font-size:22px}
+.leader{display:flex;align-items:center;gap:15px;cursor:pointer}
+.avatar{width:65px;height:65px;flex-shrink:0;border-radius:50%;background:#eee;display:grid;place-items:center;font-size:30px}
+.muted{color:#666;font-size:14px}
+.modal{display:none;position:fixed;inset:0;background:#0007;padding:20px;align-items:center;justify-content:center;z-index:5}
+.modal.open{display:flex}
+.modal-content{background:#fff;padding:25px;border-radius:12px;width:100%;max-width:420px}
+.modal-content input{display:block}
+.modal-content button{width:100%}
+@media(max-width:900px){body{padding:18px}.main{grid-template-columns:1fr 1fr}.search{grid-column:1/-1}}
+@media(max-width:600px){header{flex-direction:column;align-items:flex-start}.logo{font-size:36px}.main,.bottom{grid-template-columns:1fr}.search{grid-column:auto}.auth{width:100%}.auth button{flex:1}}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">МАРКА</div>
+<div class="auth">
+<button onclick="openAuth('Вход')">Вход</button>
+<button onclick="openAuth('Регистрация')">Регистрация</button>
+</div>
+</header>
+
+<main class="main">
+<section class="card ad">
+<div class="picture">🛍</div>
+<h1>Реклама<br>товаров</h1>
+<p>Размещайте и находите товары</p>
+<button onclick="showMessage('Реклама товаров','Раздел объявлений о товарах.')">Перейти</button>
+</section>
+
+<section class="card ad">
+<div class="picture">💻</div>
+<h1>Реклама<br>стартапов</h1>
+<p>Идеи, проекты и новые возможности</p>
+<button onclick="showMessage('Реклама стартапов','Раздел рекламы проектов и новых компаний.')">Перейти</button>
+</section>
+
+<section class="card search">
+<h2>Поисковик</h2>
+<input id="query" type="search" placeholder="Поиск товаров...">
+<select id="category">
+<option value="">Категория</option>
+<option>Одежда</option>
+<option>Электроника</option>
+<option>Красота</option>
+<option>Дом</option>
+<option>Другое</option>
+</select>
+<select id="city">
+<option value="">Город</option>
+<option>Лимасол</option>
+<option>Пафос</option>
+<option>Никосия</option>
+<option>Ларнака</option>
+</select>
+<button onclick="searchProducts()">Найти</button>
+<p id="result" class="muted"></p>
+</section>
+</main>
+
+<section class="bottom">
+<div class="card">
+<h2>Соцсети</h2>
+<div class="socials">
+<a href="#" onclick="social('Telegram');return false">✈</a>
+<a href="#" onclick="social('Instagram');return false">◎</a>
+<a href="#" onclick="social('TikTok');return false">♪</a>
+<a href="#" onclick="social('YouTube');return false">▶</a>
+</div>
+</div>
+
+<div class="card" onclick="showMessage('Информация о руководителе','Здесь будут фотография, имя, фамилия, отчество, телефон и описание руководителя.')">
+<h2>Информация о руководителе</h2>
+<div class="leader">
+<div class="avatar">👤</div>
+<div>
+<strong>Имя Фамилия Отчество</strong>
+<p class="muted">Должность</p>
+<p class="muted">Описание руководителя и компании</p>
+</div>
+<span>›</span>
+</div>
+</div>
+</section>
+
+<div class="modal" id="modal">
+<div class="modal-content">
+<h2 id="modalTitle"></h2>
+<div id="modalBody"></div>
+<p><button onclick="closeModal()">Закрыть</button></p>
+</div>
+</div>
+
+<script>
+function openAuth(mode){
+document.getElementById('modalTitle').textContent=mode;
+const reg=mode==='Регистрация';
+document.getElementById('modalBody').innerHTML=`
+<form onsubmit="demoAuth(event)">
+${reg?'<input placeholder="Имя" required><input placeholder="Фамилия" required><input placeholder="Отчество">':''}
+<input type="email" placeholder="Электронная почта" required>
+<input type="password" placeholder="Пароль (минимум 8 символов)" minlength="8" required>
+<button type="submit">${reg?'Зарегистрироваться':'Войти'}</button>
+</form>
+<p class="muted">Демонстрационная форма. Настоящие аккаунты ещё не подключены.</p>`;
+document.getElementById('modal').classList.add('open');
+}
+function demoAuth(e){
+e.preventDefault();
+showMessage('Форма заполнена','Для настоящей регистрации нужно подключить сервис авторизации.');
+}
+function showMessage(title,message){
+document.getElementById('modalTitle').textContent=title;
+document.getElementById('modalBody').textContent=message;
+document.getElementById('modal').classList.add('open');
+}
+function closeModal(){document.getElementById('modal').classList.remove('open')}
+function social(name){showMessage(name,'Настоящая ссылка на '+name+' пока не добавлена.')}
+function searchProducts(){
+const q=document.getElementById('query').value.trim();
+const c=document.getElementById('category').value;
+const city=document.getElementById('city').value;
+let s='Каталог товаров пока не подключён.';
+if(q)s+=' Запрос: '+q+'.';
+if(c)s+=' Категория: '+c+'.';
+if(city)s+=' Город: '+city+'.';
+document.getElementById('result').textContent=s;
+}
+</script>
+</body>
+</html>
+
+
+
+
+t.me/anonaskbot?start=ygiet
+О себе
